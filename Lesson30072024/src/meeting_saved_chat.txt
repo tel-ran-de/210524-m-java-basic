@@ -1,0 +1,172 @@
+09:42:44 From Starta Institute 36 to Everyone:
+	public static int returnNum(){
+	        System.out.println("Before return");
+	        return new Random().nextInt(10);
+	        // is not working
+	//        System.out.println("After return");
+	//        int i = 0;
+	//        if(true){}
+	    }
+09:42:53 From Starta Institute 36 to Everyone:
+	System.out.println(returnNum());
+10:08:38 From Starta Institute 36 to Everyone:
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Choose menu item(1, 2, 3):");
+	int menuItem = sc.nextInt();
+	switch (menuItem) {
+	    case 1:
+	        System.out.println("Choose operation:");
+	        break;
+	    case 2:
+	        System.out.println("History");
+	        break;
+	    case 3:
+	        System.out.println("Exit");
+	        break;
+	    default:
+	        System.out.println("Unsupported operation");
+	}
+10:15:51 From Mariia Shirokova to Everyone:
+	👍🏻
+10:19:42 From Starta Institute 36 to Everyone:
+	int day = 5;
+	//        if-else
+	        if (day == 1) {
+	            System.out.println("Monday");
+	        } else if (day == 2) {
+	            System.out.println("Tuesday");
+	        } else if (day == 3) {
+	            System.out.println("Wednesday");
+	        } else if (day == 4) {
+	            System.out.println("Thursday");
+	        } else if (day == 5) {
+	            System.out.println("Friday");
+	        } else if (day == 6) {
+	            System.out.println("Saturday");
+	        } else if (day == 7) {
+	            System.out.println("Sunday");
+	        } else {
+	            System.out.println("Unsupported day");
+	        }
+10:19:52 From Starta Institute 36 to Everyone:
+	//        switch-case
+	        switch (day) {
+	            case 1:
+	                System.out.println("Monday");
+	                break;
+	            case 2:
+	                System.out.println("Tuesday");
+	                break;
+	            case 3:
+	                System.out.println("Wednesday");
+	                break;
+	            case 4:
+	                System.out.println("Thursday");
+	                break;
+	            case 5:
+	                System.out.println("Friday");
+	                break;
+	            case 6:
+	                System.out.println("Saturday");
+	                break;
+	            case 7:
+	                System.out.println("Sunday");
+	                break;
+	            default:
+	                System.out.println("Unsupported day");
+	        }
+10:33:43 From Starta Institute 36 to Everyone:
+	https://www.baeldung.com/java-switch
+11:02:57 From Maria Shashenko to Everyone:
+	Reacted to "photo_5280571950546149037_y.jpg" with 👍
+11:05:29 From Starta Institute 36 to Everyone:
+	int num = 5;
+	//        if-else
+	//        if (num % 2 == 0) {
+	//            System.out.println("Even");
+	//        } else {
+	//            System.out.println("Odd");
+	//        }
+	        if (num >= 0 && num <= 10) {
+	            System.out.println("Yes");
+	        } else if (num > 100 && num < 120){
+	            System.out.println("No");
+	        } else {
+	            System.out.println("Ok");
+	        }
+11:05:40 From Starta Institute 36 to Everyone:
+	//        switch case
+	//        int res = num % 2;
+	//        switch (res) {
+	//            case 0:
+	//                System.out.println("Even");
+	//                break;
+	//            case 1:
+	//                System.out.println("Odd");
+	//                break;
+	//            default:
+	//                System.out.println("Unsupported value");
+	//        }
+	        String  res = num >= 0 && num <= 10 ? "true" : "false";
+	        switch (res) {
+	            case "true":
+	                System.out.println("Even");
+	                break;
+	            case "false":
+	                System.out.println("Odd");
+	                break;
+	            default:
+	                System.out.println("Unsupported value");
+	        }
+11:20:35 From Starta Institute 36 to Everyone:
+	Создайте switch-блок с днями недели
+	Создайте переменные int day; String dayString;
+	В каждом кейсе инициализируйте переменную dayString правильным значением.
+	Запустите программу, передав в switch-условие день 2.
+11:27:54 From Anton Schellhorn-Blaschewitsch to Starta Institute 36(direct message):
+	switch (Week){	    int day(2);	case 1:	    System.out.println("Monday");	    break;	case 2:	    System.out.println("Tuesday");	    break;	case 3:	    System.out.println("Wednesday");	    break;	case 4:	    System.out.println("Thursday");	    break;	case 5:	    System.out.println("Friday");	    break;	case 6:	    System.out.println("Saturday");	    break;	case 7:	    System.out.println("Sunday");	    break;	default:	    System.out.println("Unsupported day");	}
+11:28:04 From Anton Schellhorn-Blaschewitsch to Starta Institute 36(direct message):
+	Ошибку выдаёт
+11:33:41 From Maria Shashenko to Everyone:
+	int day = 4;	    String dayString = "";	    	    switch (day) {	        case 1:	            dayString = "Monday";	            break;	        case 2:	            dayString = "Tuesday";	            break;	        case 3:	            dayString = "Wednesday";	            break;	        case 4:	            dayString = "Thursday";	            break;	        case 5:	            dayString = "Friday";	            break;	        case 6:	            dayString = "Saturday";	            break;	        case 7:	            dayString = "Sunday";	            break;	        default:	            System.out.println("Unsupported day");	    }	    System.out.println(dayString);	}
+11:54:12 From Starta Institute 36 to Everyone:
+	int num = 2;
+	        String res = "";
+	        if (num % 2 == 0) {
+	            res = "Even";
+	        } else {
+	            res = "Odd";
+	        }
+	        System.out.println(res);
+	//        if => num % 2 == 0 ? "Even"
+	//        else => : "Odd"
+	//                          1               2       3
+	        String ternRes = num % 2 == 0 ? "Even" : "Odd";
+	//        String ternRes = num % 2 == 0 ? num > 100 ? "Even" : "Odd" : "Ok";
+	//        String ternRes1 = num % 2 == 0 ? "Ok" : num > 100 ? "Even" : "Odd";
+	        System.out.println(ternRes);
+11:54:52 From Starta Institute 36 to Everyone:
+	Создайте switch-блок, который мог бы определить, является ли переданный день выходным или рабочим днем.
+	Создайте переменные int day; String dayString;
+	Используйте объединение для несколько случаев без операторов break
+	Реализуйте тот же процесс используя if-else блоки
+	Реализуйте тот же процесс используя тернарное выражение
+12:22:59 From Konstantin Ishchenko to Everyone:
+	int day = 12;	String dayString = "";	switch (day) {	    case 1:	    case 2:	    case 3:	    case 4:	    case 5:	        System.out.println("Working day");	        break;	    case 6:	    case 7:	        System.out.println("Weekend");	        break;	    default:	        System.out.println("Unsupported day");	}		if (day <= 5 && day >= 1) {	    System.out.println("Working day");	} else if (day >=6 && day <= 7) {	    System.out.println("Weekend");	}else {	    System.out.println("Unsupported day");	}	String ternRes = day <= 5 && day >= 1 ? "Working day" : day >= 6 && day <= 7 ? "Weekend" : "Unsupported day" ;	System.out.println(ternRes);
+12:24:07 From Starta Institute 36 to Everyone:
+	Пользователь вводит номер месяца, вывести название месяца и количество дней.
+12:29:47 From Starta Institute 36 to Everyone:
+	Январь - 31 день
+	Февраль - 28 дней
+	Март - 31 день
+	Апрель - 30 дней
+	Май - 31 день
+	Июнь - 30 дней
+	Июль - 31 день
+	Август - 31 день
+	Сентябрь - 30 дней
+	Октябрь - 31 день
+	Ноябрь - 30 дней
+	Декабрь - 31 день
+12:49:17 From Anton Schellhorn-Blaschewitsch to Everyone:
+	int monthNum = 13;	if (monthNum == 2){	    System.out.println("28");	} else if (monthNum == 4 || monthNum == 6 || monthNum == 9|| monthNum == 11 ){	    System.out.println("30");	} else if (monthNum == 1 || monthNum == 3 || monthNum == 5|| monthNum == 7 ||	        monthNum == 8 || monthNum == 10 || monthNum == 12){	    System.out.println("31");	} else {	    System.out.println("No Month");	}		//--------------------------------	switch(monthNum){	    case 1 :	    case 3 :	    case 5 :	    case 7 :	    case 8 :	    case 10 :	    case 12 :	        System.out.println("31");	 break;	    case 4 :	    case 6 :	    case 9 :	    case 11 :	        System.out.println("30");	break;	    case 2 :	        System.out.println("28");	        break;	    default:	        System.out.println("No Month");	}
