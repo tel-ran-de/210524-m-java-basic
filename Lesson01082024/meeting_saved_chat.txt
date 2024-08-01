@@ -1,0 +1,157 @@
+09:35:39 From Starta Institute 36 to Everyone:
+	for(int i = 0; i < 5; i++) {
+	    for(int j = 0; j < 5; j++) {
+	        System.out.print("* ");
+	    }
+	    System.out.println();
+	}
+09:45:50 From Starta Institute 36 to Everyone:
+	Написать программу, которая выводит таблицу умножения
+09:46:25 From Starta Institute 36 to Everyone:
+	for (int i = 2; i < 10; i++) {
+	    System.out.print("2 * " + i + " = " + (2*i));
+	    System.out.println();
+	}
+09:48:19 From Starta Institute 36 to Everyone:
+	for(int i = 0; i < 5; i++) {
+	    for(int j = 0; j < 5; j++) {
+	        System.out.print("* ");
+	    }
+	    System.out.println();
+	}
+09:48:27 From Aizhana to Everyone:
+	Я тоже опоздала, сорри
+09:48:28 From Starta Institute 36 to Everyone:
+	for (int i = 2; i < 10; i++) {
+	    System.out.print("2 * " + i + " = " + (2*i));
+	    System.out.println();
+	}
+09:53:59 From Maria Shashenko to Everyone:
+	+
+09:54:31 From Maria Shashenko to Starta Institute 36(direct message):
+	for (int n = 2; n < 10; n++) {	    for (int i = 2; i < 10; i++)	        System.out.println(n + " * " + i + " = " + (n * i) + " ");	    System.out.println();	}
+09:54:55 From Maria Shashenko to Starta Institute 36(direct message):
+	🙂
+09:57:15 From Anton Schellhorn-Blaschewitsch to Starta Institute 36(direct message):
+	for (int i = 2; i < 10; i++) {	    System.out.println("2 * " + i + " = " + (2*i));	    for (int j = 3; j < 10; j++) {	        System.out.println("3 * " + j + " = " + (3*j));	        for (int k = 4; k < 10; k++) {	            System.out.println("4 * " + k + " = " + (4*k));	        }	    }		}	    System.out.println();	}
+09:58:42 From Taisiia Bogdanova to Starta Institute 36(direct message):
+	for (int i = 2; i < 10; i++) {	    System.out.print("2 * " + i + " = " + (2*i));	    System.out.println();		    for (int j =2; j < 10; j++){	        System.out.print(i + " * " + j + " = " + (i*j));	        System.out.println();	    }
+10:00:39 From Mykhailo Martyshev to Starta Institute 36(direct message):
+	public class Umn {
+	    public static void main(String[] args) {
+	        for (int i = 1; i <= 10; i++) {
+	            System.out.println("3 * " + i + " = " + (3*i));
+	            for (int j = 1; j <= 10; j++) {
+	                System.out.println(i + " *" + j + " =" + (i*j));
+	            }
+	        }
+	    }
+	}
+10:42:54 From Starta Institute 36 to Everyone:
+	int i = 10;
+	        while (i > 0) {
+	            System.out.println(i);
+	//            i++;
+	            i--;
+	        }
+	//        System.out.println(i);
+10:49:12 From Starta Institute 36 to Everyone:
+	int i = 2;
+	while (true) {
+	    if (i < 5) {
+	        System.out.println("JAVA " + i);
+	        i++;
+	    } else {
+	        break;
+	    }
+	}
+10:51:21 From Starta Institute 36 to Everyone:
+	for (int idx = 0; idx < 10; idx++) {
+	    System.out.println("JAVA");
+	}
+10:55:35 From Mykhailo Martyshev to Everyone:
+	Бесконечность и далее😂
+10:57:21 From Starta Institute 36 to Everyone:
+	Инициализируйте переменную int count = 10;
+	Создать метод, который печатает в консоле “Привет программист” count раз 
+	Используйте цикл while
+11:01:54 From Konstantin Ishchenko to Starta Institute 36(direct message):
+	int count = 10;	while (count < 15){	    System.out.println("Hello ");	    count++;	}
+11:05:10 From Natalia Gordiyenko to Starta Institute 36(direct message):
+	public static void printHallo(int count) {	    int i = 1;	    while (i <= count) {	        System.out.println("Привет программист");	        i++;	    }
+11:06:06 From Mykhailo Martyshev to Everyone:
+	while (count > 0) {
+	    System.out.println("Hello developer");
+	      count--;
+	}
+11:06:20 From Mykhailo Martyshev to Everyone:
+	public class WhileClass {
+	    public static void main(String[] args) {
+	        int count = 10;
+	//        while (true) {
+	//            if (count < 10){
+	//                System.out.println("Hello developer");
+	//                count++;
+	//            } else {
+	//                break;
+	//            }
+	//        }
+	        while (count > 0) {
+	            System.out.println("Hello developer");
+	              count--;
+	        }
+	    }
+	}
+11:31:34 From Starta Institute 36 to Everyone:
+	int i = 10;
+	        do {
+	            System.out.println(i);
+	            i++;
+	        } while (i < 5);
+	//        while (i < 5) {
+	//            System.out.println("JAVA");
+	//            i++;
+	//        }
+11:32:19 From Starta Institute 36 to Everyone:
+	Используйте цикл do-while
+	Инициализируйте переменную int i = 0;
+	Добавьте в тело инструкцию System.out.println("Я в теле DO");
+	Определите условие i < 3
+	Запустите код
+	Определите условие i < 0
+	Проанализируйте результат
+11:37:44 From Anton Schellhorn-Blaschewitsch to Starta Institute 36(direct message):
+	int i = 0;	do {	    System.out.println("Я в теле DO");	    i++;	} while (i < 3);	while (i < 0);
+11:39:23 From Olga Ziabko to Starta Institute 36(direct message):
+	int i = 0;	        do	        {	            System.out.println("Я в теле DO");	            i++;	        }	        while (i < 3) ;	    }	}
+11:41:36 From Karyna Keduk to Starta Institute 36(direct message):
+	int i = 0;	do{	    System.out.println("Я в теле DO");	    i++;	}while (i < 3);		do{	    System.out.println("Я в теле DO");	    i++;	}while (i < 0);
+11:43:04 From Mykhailo Martyshev to Starta Institute 36(direct message):
+	public class WhileDo {
+	    public static void main(String[] args) {
+	        int i = 0;
+	        do {
+	            System.out.println(i);
+	            i++;
+	        }while (i<3);
+	    }
+	}
+11:45:12 From Starta Institute 36 to Everyone:
+	Вы реализуете игру, в которой вы показываете пользователю некоторые параметры, 
+	нажмите 1, чтобы сделать это..., 
+	нажмите 2, чтобы сделать это... и т. д., 
+	и нажмите "Q", чтобы выйти из игры.
+	Реализуйте меню выбора игрока (Elf or Orc and Exit)
+	Отобразите меню
+	1. Elf
+	2. Orc
+	3. Exit
+	Проверьте ввод на соответствие, в случае неверного ввода распечатайте "Choose any one : " и покажите меню выбора
+	Сохраните выбор
+	Распечатайте выбор в консоль
+12:30:43 From Starta Institute 36 to Everyone:
+	You are Elf
+12:39:01 From Konstantin Ishchenko to Starta Institute 36(direct message):
+	Scanner scan = new Scanner (System. in);			       char choose;	        do {	            System.out.println("Choose a hero");	            System.out.println("1 - Elf");	            System.out.println("2 - Orc");	            System.out.println("3 - Exit");	            choose = scan.next().charAt(0);	        } while(choose != 'Q' && choose !='1' && choose != '2' && choose != '3');	//        	        switch (choose){	            case '1':	                System.out.println("Elf");	                break;	            case '2':	                System.out.println("Orc");	                break;	            case '3':	            case 'Q':	                System.out.println("See you");	                break;	            default:	                System.out.println("unknown char");		        }
+12:40:57 From Konstantin Ishchenko to Everyone:
+	Scanner scan = new Scanner (System. in);			       char choose;	        do {	            System.out.println("Choose a hero");	            System.out.println("1 - Elf");	            System.out.println("2 - Orc");	            System.out.println("3 - Exit");	            choose = scan.next().charAt(0);	        } while(choose != 'Q' && choose !='1' && choose != '2' && choose != '3');	//	        switch (choose){	            case '1':	                System.out.println("Elf");	                break;	            case '2':	                System.out.println("Orc");	                break;	            case '3':	            case 'Q':	                System.out.println("See you");	                break;	            default:	                System.out.println("unknown char");		        }
