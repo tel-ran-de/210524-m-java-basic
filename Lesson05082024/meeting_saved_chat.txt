@@ -1,0 +1,98 @@
+09:31:56 From Starta Institute 36 to Everyone:
+	Написать программу подсчета факториал с помощью цикла for и while
+09:32:30 From Starta Institute 36 to Everyone:
+	5! = 1 * 2 * 3 * 4 * 5
+09:37:11 From Anton Schellhorn-Blaschewitsch to Starta Institute 36(direct message):
+	int i = 1;	      for (int i = 0; x * 1 ; i++) {	          System.out.println(i);	      } У меня уже сразу как то не пошло....
+09:44:45 From Karyna Keduk to Starta Institute 36(direct message):
+	int num = 3;	int factorial = 1;		for (int i = 1; i <= num; i++) {	    factorial = factorial * i;	}	System.out.println(num+factorial);
+09:49:04 From Olena Shurinova to Everyone:
+	int n = 5;	        int result =1;	        for (int i = 1; i <=n; i++){	            result *= i;	        }	        System.out.println( "factorial" + n + ":" + result);	        int result2 =1;	        int  i= 1;	        while ( i <= n) {	            result2 *= i;	            i++;		        }	        System.out.println("factorial" + n + ":" + result2);	    }
+10:27:00 From Starta Institute 36 to Everyone:
+	public static void main(String[] args) {
+	        int num = 10;
+	        long startFor = System.nanoTime();
+	        System.out.println(factorialFor(num));
+	        long endFor = System.nanoTime();
+	        System.out.println("For - " + (endFor - startFor) + " ns\n");
+	        long startRec = System.nanoTime();
+	        System.out.println(factorialRecursion(num));
+	        long endRec = System.nanoTime();
+	        System.out.println("Rec - " + (endRec - startRec) + " ns\n");
+	    }
+	    public static long factorialRecursion(int n) {
+	        if (n <= 2) {
+	            return n;
+	        }
+	        return n * factorialRecursion(n - 1);
+	    }
+	    public static long factorialFor(int n) {
+	        long fact = 1;
+	        for (int i = 2; i <= n; i++) {
+	//            fact *= i;
+	            fact = fact * i;
+	        }
+	        return fact;
+	    }
+12:22:13 From Starta Institute 36 to Everyone:
+	public class Person {
+	//    properties/ variables
+	    private String name;
+	    private int age;
+	//    default constructor
+	//    public Person() {}
+	//    name - constructor
+	//    public Person(String name) {
+	//        this.name = name;
+	//    }
+	// age - constructor
+	//    public Person(int age) /*throws Exception*/ {
+	//        if (age < 0) {
+	////            throw new Exception("Incorrect age!");
+	//            System.out.println("Incorrect age!");
+	//        } else {
+	//            this.age = age;
+	//        }
+	//    }
+12:22:19 From Starta Institute 36 to Everyone:
+	//    full params constructor
+	    public Person(String name, int age) {
+	        this.name = name;
+	        if (age < 0) {
+	            System.out.println("Incorrect age!");
+	        } else {
+	            this.age = age;
+	        }
+	    }
+	//    public void setAge(int age) {
+	//        if (age < 0) {
+	//            System.out.println("Incorrect age!");
+	//        } else {
+	//            this.age = age;
+	//        }
+	//    }
+	    public int getAge() {
+	        return age;
+	    }
+	    public String getName() {
+	        return name;
+	    }
+	}
+12:27:51 From Starta Institute 36 to Everyone:
+	public static void main(String[] args) {
+	        int i = 10;
+	        String str = new String("Java");
+	        Person john = new Person("John", 30);
+	        Person jane = new Person("Jane", 27);
+	//        String str = new String("Java");
+	//        Person person1 = new Person("Alex");
+	//        Person person = new Person();
+	////        ..... get data from server
+	//        person.setAge(30);
+	//        person.age = -10;
+	//        person.name = "12312312";
+	        System.out.println("Your name is " + john.getName()
+	                + " and your age is " + john.getAge());
+	        System.out.println("Your name is " + jane.getName()
+	                + " and your age is " + jane.getAge());
+	    }
