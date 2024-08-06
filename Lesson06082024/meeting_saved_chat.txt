@@ -1,0 +1,182 @@
+09:29:38 From Mariia Shirokova to Everyone:
+	¡Hola!
+09:29:59 From Anton Schellhorn-Blaschewitsch to Everyone:
+	Hi
+09:30:13 From Yana Kashaba to Everyone:
+	hallo hallo
+09:31:39 From Mariia Shirokova to Everyone:
+	me gustas pepinos y aguacate🤣
+09:32:38 From Yana Kashaba to Everyone:
+	Reacted to "me gustas pepinos y ..." with 🤩
+09:34:22 From Starta Institute 36 to Everyone:
+	public class Outer {
+	    void outerMethod() {
+	        System.out.println("inside outerMethod");
+	    }
+	    class Inner {
+	        public void show() {
+	            System.out.println("In a nested class method");
+	        }
+	    }
+	}
+09:34:30 From Starta Institute 36 to Everyone:
+	Outer.Inner in = new Outer().new Inner();
+	in.show();
+	Outer outer = new Outer();
+	outer.outerMethod();
+09:36:45 From Mariia Shirokova to Everyone:
+	Gracias 😎
+10:16:32 From Olena Shurinova to Everyone:
+	public class MainClass {	    public static void main(String[] args) {	         Outer outer = new Outer();	         outer.outerMethod();	        Outer.Inner inner = new Outer().new Inner();	        inner.show();	        System.out.println("2 + 2 = " + inner.sum( 2,2));		    }	}
+10:16:45 From Olena Shurinova to Everyone:
+	public class Outer {		        void outerMethod() {	            System.out.println("inside outerMethod");	        }	        class Inner {	            public void show() {	                System.out.println("In a nested class method");	            }		            public int sum(int num1, int num2){	                return num1 + num2;	            }	        }	    }
+10:20:39 From Starta Institute 36 to Everyone:
+	package inner.localclass;
+	public class Outer {
+	    void outerMethod() {
+	        // Print statement
+	        System.out.println("inside outerMethod");
+	        // Class 2
+	        // Inner class
+	        // It is local to outerMethod()
+	        class Inner {
+	            // Method defined inside inner class
+	            void innerMethod()
+	            {
+	                // Print statement whenever inner class is
+	                // called
+	                System.out.println("inside innerMethod");
+	            }
+	        }
+	        // Creating object of inner class
+	        Inner y = new Inner();
+	        // Calling over method defined inside it
+	        y.innerMethod();
+	    }
+	}
+10:20:46 From Starta Institute 36 to Everyone:
+	public static void main(String[] args) {
+	    Outer x = new Outer();
+	    // Calling over the same method
+	    // as we did for inner class above
+	    x.outerMethod();
+	}
+10:34:06 From Starta Institute 36 to Everyone:
+	package inner.staticclass;
+	public class Outer {
+	    private static void outerMethod()
+	    {
+	        // Print statement
+	        System.out.println("inside outerMethod");
+	    }
+	    // Class 2
+	    // Static inner class
+	    static class Inner {
+	        public static void display()
+	        {
+	            // Print statement
+	            System.out.println("inside inner class Method");
+	            // Calling method inside main() method
+	            outerMethod();
+	        }
+	    }
+	}
+10:34:12 From Starta Institute 36 to Everyone:
+	public static void main(String[] args) {
+	    Outer.Inner.display();
+	}
+10:43:23 From Starta Institute 36 to Everyone:
+	package inner.anonymousclass;
+	public class GFC {
+	    // Method 1
+	    // show() method inside main class
+	//    static Hello h = () -> {
+	//        // Print statement
+	//        System.out.println("i am in anonymous class");
+	//    };
+	    static Hello h = new Hello() {
+	        @Override
+	        public void show() {
+	            System.out.println("i am in anonymous class");
+	        }
+	    };
+	    // Method 2
+	    // Main driver method
+	    public static void main(String[] args)
+	    {
+	        // Calling show() method inside main() method
+	        h.show();
+	        Runnable r = () -> System.out.println("Hello from run method");
+	        r.run();
+	    }
+	}
+10:43:31 From Starta Institute 36 to Everyone:
+	package inner.anonymousclass;
+	public interface Hello {
+	    // Method defined inside interface
+	    void show();
+	}
+10:59:17 From Starta Institute 36 to Everyone:
+	package object;
+	public class Dog {
+	    private String name;
+	    private int age;
+	    private String color;
+	    public Dog(String name, int age, String color) {
+	        this.name = name;
+	        this.age = age;
+	        this.color = color;
+	    }
+	    public String getName() {
+	        return name;
+	    }
+	    public int getAge() {
+	        return age;
+	    }
+	    public String getColor() {
+	        return color;
+	    }
+	    public void run() {
+	        System.out.println(this.name + " is running...");
+	//        return "The dog is running...";
+	    }
+	    public void eat() {
+	        System.out.println(this.name +  " is eating...");
+	    }
+	    public void sleep() {
+	        System.out.println(this.name +  " is sleeping...");
+	    }
+	}
+10:59:32 From Starta Institute 36 to Everyone:
+	public static void main(String[] args) {
+	    Dog spike = new Dog("Spike", 8, "black");
+	    Dog tike = new Dog("Tike", 3, "white");
+	    System.out.println(spike.getName());
+	    System.out.println(tike.getName());
+	    spike.run();
+	    tike.run();
+	    tike.eat();
+	    spike.eat();
+	    spike.sleep();
+	    tike.sleep();
+	}
+11:38:32 From Starta Institute 36 to Everyone:
+	@Override
+	public String toString() {
+	    return "Dog{" +
+	            "name='" + name + '\'' +
+	            ", age=" + age +
+	            ", color='" + color + '\'' +
+	            '}';
+	}
+11:57:53 From Starta Institute 36 to Everyone:
+	Создайте класс Person
+	Определите свойство класса name с модификатором private
+	Определите конструктор с параметром name
+	Переопределите toString(), таким образом, чтобы выводилось “Name is …”
+	Переопределите hashCode(), таким образом, чтобы hashCode всегда был равен 10
+	Переопределите equals(), таким образом, чтобы сравнение было только с входящим объектом
+12:45:50 From Anton Schellhorn-Blaschewitsch to Everyone:
+	import java.util.Objects;		public class Person {	//    Создайте класс Person	//    Определите свойство класса name с модификатором private	//    Определите конструктор с параметром name	//    Переопределите toString(), таким образом, чтобы выводилось “Name is …”	//    Переопределите hashCode(), таким образом, чтобы hashCode всегда был равен 10	//    Переопределите equals(), таким образом, чтобы сравнение было только с входящим объектом	    private String name;		    @Override	    public String toString() {	        return "Name is  "  + name;	    }		    public Person(String name){	    this.name = name;		    }		    @Override	    public boolean equals(Object o) {		        return this == o;	    }		    @Override	    public int hashCode() {	        return 10;	    }	}
+12:47:21 From Anton Schellhorn-Blaschewitsch to Everyone:
+	public class Main {	    public static void main(String[] args) {	        Person bob = new Person("Bob");	        Person ivan = new Person("Ivan");	        System.out.println(bob);	        System.out.println(ivan);	        System.out.println(bob.equals(ivan));	        Object obj = new Object();	        System.out.println(bob.equals(obj));	    }	}
