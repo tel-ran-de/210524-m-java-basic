@@ -1,0 +1,87 @@
+09:33:38 From Konstantin Ishchenko to Everyone:
+	Internet.....
+09:58:52 From Starta Institute 36 to Everyone:
+	public static void main(String[] args) {
+	//        regular
+	        int[] array = new int[10];
+	//        literal
+	        int[] arrInt = {1, 2, 3, 4, 5};
+	//        for (int item : array) {
+	//            System.out.println(item);
+	//        }
+	//        System.out.println(array.length);
+	//        for (int item : arrInt) {
+	//            System.out.print(item + " ");
+	//        }
+	        for (int i = 0; i < arrInt.length; i++) {
+	            System.out.print(arrInt[i] + " ");
+	        }
+	        System.out.println();
+	//        System.out.println(arrInt[arrInt.length - 1]);
+	        System.out.println("Array length - " + arrInt.length);
+	        System.out.println("arrInt[" + (arrInt.length - 1) + "] = " + arrInt[arrInt.length - 1]);
+	    }
+09:59:54 From Starta Institute 36 to Everyone:
+	Создайте массив L = 10
+	Инициализируйте массив числами от 1 до 10 используя способ литерала
+	Выведите на консоль элемент из второй ячейки
+	Выведите на консоль элемент из предпоследней ячейки
+	Распечатайте на консоль все элементы из ячеек массива
+	Используйте инструкцию .print()
+	Замените все элементы в данном массиве на значение “-1”
+	Распечатайте на консоль все элементы из ячеек массива
+	Используйте инструкцию .print()
+10:22:45 From Konstantin Ishchenko to Everyone:
+	int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};	        System.out.println(arr[1]);	        System.out.println(arr[arr.length - 2]);	//        System.out.println(arr[arr.length]);	        for(int i = 0; i < arr.length; i++){	            System.out.print(arr[i] + " ");	        }		        System.out.println();	        for(int k = 0; k < arr.length; k++){	            arr[k] = -1;	        }	        for(int i = 0; i < arr.length; i++){	            System.out.print(arr[i] + " ");	        }
+10:31:24 From Starta Institute 36 to Everyone:
+	Создайте класс ручка (Pen)
+	Определите свойство color типа String с доступом private
+	Создайте методы getColor(); setColor(String newColor);
+	Создайте класс Test
+	Создайте три объекта типа Pen
+	Создайте массив L = 3
+	Сохраните все объекты в массив
+	Достаньте поочередно из массива ручки и измените цвет каждой на 
+	“Green”
+	“Red” 
+	“Black”
+11:11:34 From Mariia Shirokova to Everyone:
+	public class PenClass {	    private String color;		    public String getColor() {	        return color;		    }		    public void setColor(String color) {	        this.color = color;	    }	}
+11:12:04 From Mariia Shirokova to Everyone:
+	public class Test {	    public static void main(String[] args) {	        PenClass pen1 = new PenClass();	        PenClass pen2 = new PenClass();	        PenClass pen3 = new PenClass();	        pen1.setColor("Red");	        pen2.setColor("White");	        pen3.setColor("Blue");		        PenClass[] arrPens = new PenClass[]{	                pen1, pen2, pen3	        };	        for (int i = 0; i < arrPens.length; i++) {	            System.out.println(arrPens[i].getColor());		        }	        pen1.setColor("Green");	        pen2.setColor("Red");	        pen3.setColor("Black");	        for (int i = 0; i < arrPens.length; i++) {	            System.out.println(arrPens[i].getColor());		        }		    }	}
+11:16:55 From Mariia Shirokova to Everyone:
+	🤣
+11:51:17 From Starta Institute 36 to Everyone:
+	public static void main(String[] args) {
+	        int[] arr1 = {1, 2, 3, 4, 5};
+	        System.out.println(Arrays.toString(arr1));
+	        int[] arrCopy = Arrays.copyOf(arr1, 3);
+	        System.out.println(Arrays.toString(arrCopy));
+	        int[] arrRange = Arrays.copyOfRange(arr1, 1, 3);
+	        System.out.println(Arrays.toString(arrRange));
+	        Random rand = new Random();
+	        int[] userArr = new int[10];
+	        for (int i = 0; i < userArr.length; i++) {
+	            userArr[i] = rand.nextInt(100);
+	        }
+	        System.out.println(Arrays.toString(userArr));
+	        Arrays.sort(userArr);
+	//        System.out.println(userArr.toString());
+	        System.out.println(Arrays.toString(userArr));
+	    }
+11:51:22 From Starta Institute 36 to Everyone:
+	Создайте массив из всех нечётных чисел от 1 до 99.
+	Выведите его на экран в строку в обратном порядке
+12:11:51 From Natalia Gordiyenko to Starta Institute 36(direct message):
+	public static void main(String[] args) {	    int[] arr = new int[50];	    int j = 0;	    for (int i = 1; i < 100; i++) {	        if (i % 2 != 0) {	            arr[j] = i;	            j++;	        }	    }	    for (int i = arr.length-1; i >= 0; i --) {	        System.out.print(arr[i] + " ");	    }		}
+12:25:56 From Taisiia Bogdanova to Everyone:
+	int [] numOdd = new int[50];	 int index = 0;		for (int i=1; i < 100; i++){	    if (i % 2 == 1){	    numOdd [index] = i;	    index++;	    }	}	 System.out.println(Arrays.toString(numOdd));	for ( int i = numOdd.length-1; i >= 0; i--) {	    System.out.print(numOdd[i] + " ");	}
+12:26:37 From Mariia Shirokova to Everyone:
+	Reacted to " int [] numOdd = new..." with 😎
+12:26:50 From Mariia Shirokova to Everyone:
+	👍🏼
+12:29:03 From Starta Institute 36 to Everyone:
+	Создайте массив из 15 случайных целых чисел из отрезка [0;9]. 
+	Подсчитайте сколько в массиве чётных элементов и выведете это количество на экран на отдельной строке.
+12:57:50 From Konstantin Ishchenko to Everyone:
+	Random rand = new Random();	int [] numRan = new int[15];	for (int i = 0; i < numRan.length; i++) {	    numRan[i] = rand.nextInt(10);	}	System.out.println(Arrays.toString(numRan));	int even = 0;	for(int i = 0; i < numRan.length; i++){	    if (numRan[i] % 2 == 0){	        even++;	    }		}	System.out.println(even);
