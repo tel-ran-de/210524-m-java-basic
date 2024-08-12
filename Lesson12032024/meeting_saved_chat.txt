@@ -1,0 +1,57 @@
+09:43:36 From Starta Institute 36 to Everyone:
+	<dependencies>
+	<dependency>
+	<groupId>org.junit.jupiter</groupId>
+	<artifactId>junit-jupiter</artifactId>
+	<version>5.9.2</version>
+	<scope>test</scope>
+	</dependency>
+	</dependencies>
+10:14:33 From Starta Institute 36 to Everyone:
+	int[] arr = Utils.getNumbers();
+	for (int i = 0; i < arr.length; i++)
+	    System.out.print(arr[i] + " ");
+	}
+10:14:39 From Starta Institute 36 to Everyone:
+	public class Utils {
+	    public static int[] getNumbers() {
+	        int[] arr = {1, 2, 3};
+	        return arr;
+	    }
+	}
+10:15:43 From Starta Institute 36 to Everyone:
+	//    Создайте метод getNumbers();
+	//    Метод должен возвращать массив из трех целочисленных значений: [1, 2, 3]
+	//    Вызовите метод в main()
+	//    Убедитесь, что метод работает верно
+11:27:50 From Starta Institute 36 to Everyone:
+	int[] arr;
+	@BeforeEach
+	void init() {
+	    arr = new int[]{1, 2, 3};
+	    System.out.println("Before each test");
+	}
+	@AfterEach
+	void afterEach() {
+	    System.out.println("After each test");
+	}
+11:29:49 From Anton Schellhorn-Blaschewitsch to Everyone:
+	Извините у меня в подъезде сегодня проводятся работы по замене электросчётчиков.мне необходимо отключить все электро-приборы. Посмотрю запись... Все добра...
+11:30:00 From Maria Shashenko to Everyone:
+	Reacted to "Извините у меня в по..." with 👍
+11:32:16 From Starta Institute 36 to Everyone:
+	@Test
+	    void getNumbersSizeTest() {
+	//        int[] arr = {1,2,3};
+	        assertEquals(arr.length, Utils.getNumbers().length);
+	    }
+12:34:28 From Starta Institute 36 to Everyone:
+	Написать метод findMax(), который возвращает максимальное число из массива
+	Протестировать с помощью метода main()
+	Написать тесты используя библиотеку JUnit
+	тест, который проверяет пустой массив или нет
+	тест, который проверяет правильность поиска максимального значения
+12:49:14 From Konstantin Ishchenko to Everyone:
+	@Test	void findMaxEmptyTest(){	    int [] emptyArray = {};	    assertNull(Utils.findMax(emptyArray));	}		@Test	void findMaxNotEmptyTest(){	    int [] notEmptyArray = {5,6,7};	    assertNotNull(Utils.findMax(notEmptyArray));	}	@Test	void findMaxValue(){	    int [] valueArray = {4,65,87,3};	    int maxNum = 87;	    assertEquals(maxNum, Utils.findMax(valueArray));	}
+12:49:51 From Konstantin Ishchenko to Everyone:
+	public static Integer findMax(int [] array){	    if( array.length < 1){	        return null;	    }	    int maxNum = array[0];	    for(int i = 1; i < array.length; i++){	        if (maxNum < array[i]){	            maxNum = array[i];	        }	    }	    return maxNum;
